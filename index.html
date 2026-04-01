@@ -144,6 +144,7 @@
 
   <div id="overlay">
     <div id="card">
+      <div id="card-title"></div>
       <div id="card-msg"></div>
       <button onclick="closeCard()" id="card-close">次へ</button>
     </div>
@@ -320,7 +321,8 @@ function activate(i){
 /* 💬 */
 function openCard(i){
 　const firstmsg = document.createElement('div');
-  firstmsg.textContent ="Ninaちゃんのいいところ花束";
+  firstmsg.textContent ="Ninaちゃんのいいところ";
+  document.getElementById('card-title').appendChild(firstmsg);
   document.getElementById('card-msg').textContent =
     MESSAGES[used.length] || '...';
 
